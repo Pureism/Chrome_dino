@@ -1,19 +1,49 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class dino here.
+ * It's Dino class
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Muhammad Ammar Nabil 
+ * @version beta
  */
 public class dino extends Actor
 {
-    /**
-     * Act - do whatever the dino wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    private int counter = 0;
+    private boolean walk = true;
+    private boolean pressjump = false;
+    private boolean onground = true;
+    private boolean alive = true;
+
     public void act() 
     {
-        // Add your action code here.
+        if(alive){
+            
+        }else {
+            // getWorld().addObject(new Reset(), 0, 0);
+        }
+        
+        walk();
     }    
+        
+    private void walk(){
+        counter++;
+        if(counter>=5) {
+            counter = 0;
+            if(walk) {
+                setImage("dino-0.png");
+                walk = false;
+            }else {
+                setImage("dino-1.png");
+                walk = true;
+            }
+        }
+    }
+    
+    public static boolean jumpPressed() {
+        if (Greenfoot.isKeyDown("space") || Greenfoot.isKeyDown("up") && !Greenfoot.isKeyDown("down")){
+            return true;
+        }
+        return false;
+    }
 }
+
