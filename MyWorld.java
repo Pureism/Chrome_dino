@@ -20,14 +20,16 @@ public class MyWorld extends World
     private void prepare()
     {
         dino dino = new dino();
+        moon moon = new moon();
+        addObject(dino,70,279);
+        addObject(moon,724,112);
         addObject(new ground(), 376, 303);
         addObject(new ground(), 800, 303);
-        moon moon = new moon();
+        addObject(new cactus(), 800, 290);
         for (int i=0; i<5; i++){
             addObject(new star(),Greenfoot.getRandomNumber(900), Greenfoot.getRandomNumber(170)+50);
         }
-        addObject(dino,70,279);
-        addObject(moon,724,112);
-        setPaintOrder(dino.class, ground.class, moon.class, star.class);
+        setPaintOrder(dino.class, bird.class, cactus.class, ground.class, 
+                        moon.class, star.class);
     }
 }

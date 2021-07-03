@@ -13,11 +13,8 @@ public class ground extends movingAssets
         if(dino.alive){
             move(-6);
             if (getX() <= 10){
-                // ground ground = new ground();
-                // getWorld().addObject(ground,900,303);
                 getWorld().addObject(new ground(),900,303);
                 getWorld().removeObject(this);
-                // Greenfoot.addObject(new ground1(800,303));
             }
         }
     }
