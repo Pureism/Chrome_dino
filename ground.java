@@ -1,13 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class ground here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class ground extends movingAssets
 {   
+    public ground(){
+        setImage("ground-0.png");
+    }
+    
     public void act() 
     {
         if(dino.alive){
@@ -17,21 +15,11 @@ public class ground extends movingAssets
                 getWorld().removeObject(this);
             }
         }
-        
-        // if(noInternet.mainmenu && !dino.alive){
-            // move(6);
-            // if(isAtEdge()){
-                // dino.alive = true;
-                // noInternet.mainmenu = false;
-                // Greenfoot.setWorld(new MyWorld());
-            // }
-        // }
     }
     
     public void addedToWorld(World world){
         int random = Greenfoot.getRandomNumber(3);
         setImage("ground-"+random+".png");
-        // setImage("ground-0.png");
     }
 
 }

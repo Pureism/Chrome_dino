@@ -1,17 +1,16 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class cloud here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class cloud extends movingAssets
 {
     /**
      * Act - do whatever the cloud wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    
+    public cloud(){
+        setImage("cloud.png");
+    }
+    
     public void act() 
     {
         if(dino.alive){
@@ -21,6 +20,5 @@ public class cloud extends movingAssets
                 getWorld().removeObject(this);
             }
         }
-        
     }    
 }

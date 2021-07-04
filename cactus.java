@@ -1,21 +1,18 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class cactus here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class cactus extends obstacle
 {
     private int counter = 0;
     private boolean cactus = true;
     
+    public cactus(){
+        setImage("cactus-small-1.png");
+    }
+    
     public void act() 
     {
         if(dino.alive){
             counter++;
-            // addObject(new bird(), 800, 303);
             if(cactus){
                 randomization();
                 cactus = false;
@@ -26,8 +23,6 @@ public class cactus extends obstacle
                 getWorld().removeObject(this);
             }
         }
-        
-
     }    
     
     private void randomization(){

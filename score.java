@@ -1,17 +1,16 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class score here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class score extends Actor
 {
     public int score = 0;
     static public int showScore = 0;
     private int lastScore;
     static public int highScore = 0;
+    
+    public score(){
+        setImage(new GreenfootImage("HI "+ highScore +"        "+ 
+                            showScore, 24, Color.GRAY, Color.DARK_GRAY));
+    }
     
     public void act() 
     {
@@ -30,8 +29,10 @@ public class score extends Actor
                             showScore, 24, Color.GRAY, Color.DARK_GRAY));   
             }
             lastScore = showScore;
+            if ((showScore%100) == 0 && showScore >= 100){
+                Greenfoot.playSound("100points.mp3");
+            }
         }
-        
     }    
     
     public void print (String txt){

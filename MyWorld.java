@@ -13,7 +13,7 @@ public class MyWorld extends World
     private int random;
     static public int difficulty = 0;
     private boolean startTime = true;
-
+       
     public void act(){
         counter++;
         counterDif++;
@@ -30,7 +30,7 @@ public class MyWorld extends World
         } else if (counter >= (90+random)-(int)(1.7*(double)difficulty)){
             counter = 0;
             random = Greenfoot.getRandomNumber(15);
-            if (Greenfoot.getRandomNumber(2) == 0){
+            if (Greenfoot.getRandomNumber(3) == 0){
                 addObject(new bird(), 900,Greenfoot.getRandomNumber(190)+80);
             } else{
                 addObject(new cactus(), 900,280);
@@ -48,9 +48,9 @@ public class MyWorld extends World
 
     public MyWorld()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(900, 400, 1); 
         prepare();
+        setBackground("background.jpg");
         Greenfoot.setSpeed(worldSpeed);
     }    
     
