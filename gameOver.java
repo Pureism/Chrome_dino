@@ -4,7 +4,8 @@ public class gameOver extends Actor
 {
     public void act() 
     {
-        if (Greenfoot.isKeyDown("up") || Greenfoot.isKeyDown("space")){
+        dino dino = new dino();
+        if (Greenfoot.isKeyDown("space") || Greenfoot.isKeyDown("up")){
             dino.alive = true;
             Greenfoot.setWorld(new MyWorld());
         }

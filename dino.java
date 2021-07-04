@@ -110,7 +110,7 @@ public class dino extends Actor
     
     
     private boolean jumpState() {
-        if (Greenfoot.isKeyDown("space") || Greenfoot.isKeyDown("up")){
+        if (Greenfoot.isKeyDown("up") || Greenfoot.isKeyDown("space")){
             return true;
         }
         if(pressed){return true;}

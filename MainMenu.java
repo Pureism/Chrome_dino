@@ -21,8 +21,7 @@ public class MainMenu extends World
         dino.alive = false;
         setPaintOrder(noInternet.class, gameOver.class, dino.class, score.class, bird.class, cactus.class, 
             ground.class, cloud.class, moon.class, star.class);
-        if (Greenfoot.isKeyDown("up") || Greenfoot.isKeyDown("space") || 
-            Greenfoot.mousePressed(dino)) {
+        if (Greenfoot.mouseClicked(dino)) {
                 dino.alive = true;
                 noInternet.mainmenu = false;
                 Greenfoot.setWorld(new MyWorld());
