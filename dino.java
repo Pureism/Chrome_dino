@@ -78,9 +78,15 @@ public class dino extends Actor
                     }
                 }
             }
-        }else {
-            // getWorld().addObject(new Reset(), 0, 0);
+            
+            if (isTouching(obstacle.class)){
+                alive = false;
+            }
+            
+        }else{
+            getWorld().addObject(new gameOver(),450, 200);
         }
+
     }    
         
     private void running(){

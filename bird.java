@@ -19,7 +19,7 @@ public class bird extends obstacle
             // addObject(new bird(), 835, Greenfoot.getRandomNumber(190)+80);
             if(bird){
                 fly();
-                move(-6);
+                move(-6 - MyWorld.difficulty);
                 if(isAtEdge()){
                     getWorld().removeObject(this);
                 }

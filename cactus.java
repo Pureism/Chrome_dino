@@ -15,11 +15,12 @@ public class cactus extends obstacle
     {
         if(dino.alive){
             counter++;
+            // addObject(new bird(), 800, 303);
             if(cactus){
                 randomization();
                 cactus = false;
             }
-            move(-6);
+            move(-6 - MyWorld.difficulty);
             if(isAtEdge()){
                 cactus = true;
                 getWorld().removeObject(this);

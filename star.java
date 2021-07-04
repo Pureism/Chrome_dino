@@ -14,10 +14,13 @@ public class star extends movingAssets
      */
     public void act() 
     {
-        move(-1);
-        if (isAtEdge()){
-            getWorld().addObject(new star(),900, Greenfoot.getRandomNumber(170)+50);
-            getWorld().removeObject(this);
+        if(dino.alive){
+            move(-1);
+            if (isAtEdge()){
+                getWorld().addObject(new star(),900, Greenfoot.getRandomNumber(170)+50);
+                getWorld().removeObject(this);
+            }
         }
+        
     }    
 }
