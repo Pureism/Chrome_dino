@@ -1,6 +1,6 @@
 # Dino Chrome
 
-This is my assigment project in my college. Please enjoy this trash game 🙃
+It's a **Trash game** for my assignment project in my college. Please enjoy this trash game 🙃
 
 ## Prerequisite
 
