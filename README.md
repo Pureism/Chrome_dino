@@ -1,6 +1,6 @@
 # Dino Chrome
 
-It's a **Trash game** for my assignment project in my college. Please enjoy this trash game 🙃
+It's a **Trash game** for my assignment project in my college. If you want to try this **Trash game** download [Chrome_dino.gfar](https://github.com/Pureism/Chrome_dino/blob/master/Chrome_dino.gfar "Greenfoot execute file"). Please enjoy this trash game 🙃
 
 ## Prerequisite
 
